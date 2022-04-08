@@ -1,5 +1,5 @@
-set(SOURCE_FILE image-rot.cpp)
-set(TARGET_NAME image-rot)
+set(SOURCE_FILE image-conv.cpp)
+set(TARGET_NAME image-conv)
 set(EMULATOR_TARGET ${TARGET_NAME}.fpga_emu)
 set(FPGA_TARGET ${TARGET_NAME}.fpga)
 set(FPGA_PROFILE_TARGET ${TARGET_NAME}.fpga_profile)
@@ -128,4 +128,3 @@ else()
     # to link with functions in Utils library (definded in Utils/ folder)
     target_link_libraries (${FPGA_PROFILE_TARGET} LINK_PUBLIC Utils)
 endif()
-
