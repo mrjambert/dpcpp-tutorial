@@ -56,7 +56,7 @@ if(WIN32)
     add_custom_command(OUTPUT ${WIN_EMULATOR_TARGET} 
                        COMMAND ${CMAKE_CXX_COMPILER} /EHsc ${WIN_EMULATOR_COMPILE_FLAGS} ${CMAKE_CURRENT_SOURCE_DIR}/${SOURCE_FILE} -o ${CMAKE_BINARY_DIR}/${WIN_EMULATOR_TARGET}
                        DEPENDS ${SOURCE_FILE})
-
+endif()
 
 # FPGA hardware
 if(WIN32)
