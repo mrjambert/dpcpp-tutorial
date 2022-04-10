@@ -91,7 +91,7 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
 
         float xpos = ((float)ix)*cosTheta + ((float)iy)*sinTheta;
         float ypos = -1.0f*((float)ix)*sinTheta + ((float)iy)*cosTheta;
-        if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
+        //if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
          dstPtr[(int)ypos * ImageRows + (int)xpos] = srcPtr[iy*ImageRows+ix];
 
       });
@@ -118,8 +118,8 @@ int main() {
   int imageRows;
   int imageCols;
   int i;
-  float sinTheta = -0.70710678118;
-  float cosTheta = 0.70710678118;
+  float sinTheta = 0.0f;
+  float cosTheta = 1.0f;
 
  
 
