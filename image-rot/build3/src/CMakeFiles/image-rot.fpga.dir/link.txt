@@ -1,1 +1,0 @@
-/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin/dpcpp    -rdynamic -fintelfpga -Xshardware -Xsboard=intel_a10gx_pac:pac_a10  CMakeFiles/image-rot.fpga.dir/image-rot.cpp.o  -o ../image-rot.fpga  -L/usr/lib/gcc/x86_64-linux-gnu/7 ../libUtils.a 
