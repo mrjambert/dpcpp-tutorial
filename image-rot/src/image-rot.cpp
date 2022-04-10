@@ -118,8 +118,8 @@ int main() {
   int imageRows;
   int imageCols;
   int i;
-  float sinTheta = 0.0f;
-  float cosTheta = 1.0f;
+  float sinTheta = -0.70710678118;
+  float cosTheta = 0.70710678118;
 
  
 
