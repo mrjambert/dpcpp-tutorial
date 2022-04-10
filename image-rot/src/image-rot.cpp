@@ -63,7 +63,7 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
     //}
 
     // Create the range object for the pixel data.
-    range<2> num_items{ImageRows, ImageCols};
+    range<2> num_items{ImageCols, ImageRows};
 
     // Submit a command group to the queue by a lambda function that contains the
     // data access permission and device computation (kernel).
@@ -91,8 +91,8 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
 
         float xpos = ((float)ix)*cosTheta + ((float)iy)*sinTheta;
         float ypos = -1.0f*((float)ix)*sinTheta + ((float)iy)*cosTheta;
-        //if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
-         dstPtr[(int)ypos * ImageRows + (int)xpos] = srcPtr[iy*ImageRows+ix];
+        if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
+         dstPtr[(int)ypos * ImageCols + (int)xpos] = srcPtr[iy*ImageCols+ix];
 
       });
   });
