@@ -91,11 +91,11 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
 
         float xpos = ((float)ix)*cosTheta + ((float)iy)*sinTheta;
         float ypos = -1.0f*((float)ix)*sinTheta + ((float)iy)*cosTheta;
+        if(((int)xpos >= 0) && ((int)xpos < ImageRows) &&
+       ((int)ypos >= 0) && ((int)ypos < ImageCols) )
+         dstPtr[(int)ypos * ImageRows + (int)xpos] = srcPtr[iy*ImageRows+ix];
 
-        if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
-          dstPtr[(int)ypos * ImageRows + (int)xpos] = srcPtr[iy*ImageRows+ix];
-      }
-    );
+      });
   });
 }
 
@@ -119,8 +119,8 @@ int main() {
   int imageRows;
   int imageCols;
   int i;
-  float sinTheta = -0.70710678118;
-  float cosTheta = 0.70710678118;
+  float sinTheta = 0.0f;
+  float cosTheta = 1.0f;
 
  
 
@@ -164,15 +164,15 @@ int main() {
     // Image convolution in DPC++
     ImageConv_v1(q, hInputImage, hOutputImage, sinTheta, cosTheta, imageRows, imageCols);
   } catch (exception const &e) {
-    std::cout << "An exception is caught for image convolution.\n";
+    std::cout << "An exception is caught for image rotation.\n";
     std::terminate();
   }
 
   std::cout << t.elapsed().count() << " seconds\n";
 
   /* Save the output bmp */
-  printf("Output image saved as: cat-filtered.bmp\n");
-  writeBmpFloat(hOutputImage, "cat-filtered.bmp", imageRows, imageCols,
+  printf("Output image saved as: cat-rotated.bmp\n");
+  writeBmpFloat(hOutputImage, "cat-rotated.bmp", imageRows, imageCols,
           inputImagePath);
   return 0;
 }
