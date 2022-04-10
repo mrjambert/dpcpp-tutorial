@@ -48,7 +48,7 @@ typedef std::array<float, array_size> FloatArray;
 //************************************
 // Image Convolution in DPC++ on device: 
 //************************************
-void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta, 
+void ImageRot(queue &q, float *image_in, float *image_out, float sinTheta, 
     float cosTheta, const size_t ImageRows, const size_t ImageCols) 
 {
 
@@ -161,7 +161,7 @@ int main() {
               << q.get_device().get_info<info::device::name>() << "\n";
 
     // Image convolution in DPC++
-    ImageConv_v1(q, hInputImage, hOutputImage, sinTheta, cosTheta, imageRows, imageCols);
+    ImageRot(q, hInputImage, hOutputImage, sinTheta, cosTheta, imageRows, imageCols);
   } catch (exception const &e) {
     std::cout << "An exception is caught for image rotation.\n";
     std::terminate();
