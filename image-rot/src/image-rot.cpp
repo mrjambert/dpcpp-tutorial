@@ -93,7 +93,7 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
         float ypos = -1.0f*((float)ix)*sinTheta + ((float)iy)*cosTheta;
         if(((int)xpos >= 0) && ((int)xpos < ImageRows) &&
        ((int)ypos >= 0) && ((int)ypos < ImageCols) )
-         dest_data[(int)ypos * ImageCols + (int)xpos] = src_data[iy*ImageCols+ix];
+         dstPtr[(int)ypos * ImageCols + (int)xpos] = srcPtr[iy*ImageCols+ix];
 
       });
   });
