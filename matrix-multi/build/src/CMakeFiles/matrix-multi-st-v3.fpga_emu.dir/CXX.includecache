@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/u132412/dpcpp-tutorial/matrix-multi/src/matrix-multi-st-v3.cpp
+CL/sycl.hpp
+-
+array
+-
+iostream
+-
+cmath
+-
+dpc_common.hpp
+/home/u132412/dpcpp-tutorial/matrix-multi/src/dpc_common.hpp
+sycl/ext/intel/fpga_extensions.hpp
+-
+

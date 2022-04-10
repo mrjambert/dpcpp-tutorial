@@ -1,0 +1,1 @@
+/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin/dpcpp    -rdynamic -fintelfpga CMakeFiles/matrix-multi-st-v3.fpga_emu.dir/matrix-multi-st-v3.cpp.o  -o ../matrix-multi-st-v3.fpga_emu 
