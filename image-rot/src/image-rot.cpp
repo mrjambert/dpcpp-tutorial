@@ -93,7 +93,7 @@ void ImageConv_v1(queue &q, float *image_in, float *image_out, float sinTheta,
         float ypos = -1.0f*((float)ix)*sinTheta + ((float)iy)*cosTheta;
 
         if(((int)xpos >= 0) && ((int)xpos < ImageCols) && ((int)ypos >= 0) && ((int)ypos < ImageRows) )
-          dstPtr[(int)ypos * ImageRows + (int)xpos] = src_data[iy*ImageRows+ix];
+          dstPtr[(int)ypos * ImageRows + (int)xpos] = srcPtr[iy*ImageRows+ix];
       }
     );
   });
@@ -147,8 +147,6 @@ int main() {
   /* Read in the BMP image */
   hInputImage = readBmpFloat(inputImagePath, &imageRows, &imageCols);
   printf("imageRows=%d, imageCols=%d\n", imageRows, imageCols);
-  printf("filterWidth=%d, \n", filterWidth);
-  /* Allocate space for the output image */
   hOutputImage = (float *)malloc( imageRows*imageCols * sizeof(float) );
   for(i=0; i<imageRows*imageCols; i++)
     hOutputImage[i] = 1234.0;
