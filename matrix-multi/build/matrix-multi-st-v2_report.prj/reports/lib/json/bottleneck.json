@@ -1,0 +1,1662 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":425
+      , "src":"326"
+      , "dst":"333"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"Fused loop MMstv2.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert 64-bit Unsigned Integer to Floating-point(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Convert Floating-point to 64-bit Unsigned Integer(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"79"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":326
+          , "start":"371.00"
+          , "parent":"_ZTS6MMstv2.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":327
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":332
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":328
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":329
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":330
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":331
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":335
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":336
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":337
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":338
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":339
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":340
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":343
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":344
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":345
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":346
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":347
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":348
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":351
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":352
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":353
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert 64-bit Unsigned Integer to Floating-point"
+          , "id":354
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":355
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Convert Floating-point to 64-bit Unsigned Integer"
+          , "id":356
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":333
+          , "end":"399.00"
+          , "parent":"_ZTS6MMstv2.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":79
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":326
+          , "to":327
+        }
+        , {
+          "from":327
+          , "to":328
+        }
+        , {
+          "from":328
+          , "to":329
+        }
+        , {
+          "from":329
+          , "to":330
+        }
+        , {
+          "from":330
+          , "to":331
+        }
+        , {
+          "from":335
+          , "to":336
+        }
+        , {
+          "from":336
+          , "to":337
+        }
+        , {
+          "from":337
+          , "to":338
+        }
+        , {
+          "from":338
+          , "to":339
+        }
+        , {
+          "from":339
+          , "to":340
+        }
+        , {
+          "from":343
+          , "to":344
+        }
+        , {
+          "from":344
+          , "to":345
+        }
+        , {
+          "from":345
+          , "to":346
+        }
+        , {
+          "from":346
+          , "to":347
+        }
+        , {
+          "from":347
+          , "to":348
+        }
+        , {
+          "from":351
+          , "to":352
+        }
+        , {
+          "from":352
+          , "to":353
+        }
+        , {
+          "from":353
+          , "to":354
+        }
+        , {
+          "from":354
+          , "to":355
+        }
+        , {
+          "from":355
+          , "to":356
+        }
+        , {
+          "from":332
+          , "to":333
+        }
+        , {
+          "from":326
+          , "to":333
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":426
+      , "src":"105"
+      , "dst":"135"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv2.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Or(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":105
+          , "start":"107.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":117
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":114
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":120
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":124
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":126
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":129
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":130
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":131
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Or"
+          , "id":133
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":134
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":135
+          , "end":"253.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":105
+          , "to":114
+        }
+        , {
+          "from":117
+          , "to":120
+        }
+        , {
+          "from":105
+          , "to":124
+        }
+        , {
+          "from":120
+          , "to":124
+        }
+        , {
+          "from":124
+          , "to":126
+        }
+        , {
+          "from":126
+          , "to":129
+        }
+        , {
+          "from":105
+          , "to":130
+        }
+        , {
+          "from":129
+          , "to":130
+        }
+        , {
+          "from":130
+          , "to":131
+        }
+        , {
+          "from":131
+          , "to":133
+        }
+        , {
+          "from":133
+          , "to":134
+        }
+        , {
+          "from":134
+          , "to":135
+        }
+        , {
+          "from":105
+          , "to":135
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":427
+      , "src":"106"
+      , "dst":"121"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv2.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":106
+          , "start":"107.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":134
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":131
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":117
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":121
+          , "end":"145.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":106
+          , "to":134
+        }
+        , {
+          "from":106
+          , "to":131
+        }
+        , {
+          "from":134
+          , "to":117
+        }
+        , {
+          "from":131
+          , "to":117
+        }
+        , {
+          "from":117
+          , "to":121
+        }
+        , {
+          "from":106
+          , "to":121
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":428
+      , "src":"103"
+      , "dst":"128"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv2.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":103
+          , "start":"107.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":134
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":117
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":126
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":128
+          , "end":"181.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":103
+          , "to":134
+        }
+        , {
+          "from":103
+          , "to":117
+        }
+        , {
+          "from":134
+          , "to":126
+        }
+        , {
+          "from":117
+          , "to":126
+        }
+        , {
+          "from":126
+          , "to":128
+        }
+        , {
+          "from":103
+          , "to":128
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":429
+      , "src":"104"
+      , "dst":"132"
+      , "type":"fMAX/II"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv2.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                  , "line":"80"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":104
+          , "start":"107.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":117
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":126
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":131
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":132
+          , "end":"217.00"
+          , "parent":"_ZTS6MMstv2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":104
+          , "to":117
+        }
+        , {
+          "from":104
+          , "to":126
+        }
+        , {
+          "from":117
+          , "to":131
+        }
+        , {
+          "from":126
+          , "to":131
+        }
+        , {
+          "from":131
+          , "to":132
+        }
+        , {
+          "from":104
+          , "to":132
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

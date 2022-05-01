@@ -1,0 +1,1620 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [55.6501, 29.6312, 27.9096, 37.265, 14.8221]
+  , "total":
+  [242749, 476920, 1011, 225, 521]
+  , "name":"Kernel System"
+  , "max_resources":
+  [854400, 1708800, 2713, 1518, 42720]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [179950, 358572, 492, 123, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [3601, 8981, 61, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 16 global loads and 4 global stores. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 16 global loads and 4 global stores."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"file:////glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/lib/oclfpga/aoc_help_pages/hnj1476724450050.html"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [0, 67, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"MMstv2"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [13.8967, 8.14817, 6.3963, 16.808, 6.71937]
+      , "total_kernel_resources":
+      [59198, 109300, 456, 102, 521]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1338, 2411, 0, 0, 10]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [24, 1536, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [24, 1536, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [8, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [8, 2, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [6121, 25647, 40, 0, 59]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [6121, 25647, 40, 0, 59]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [23, 100, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:71"
+                  , "type":"resource"
+                  , "data":
+                  [23, 100, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [12, 10, 39, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [660, 276, 0, 15, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [468, 276, 0, 15, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [192, 0, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:71"
+                  , "type":"resource"
+                  , "data":
+                  [7, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"21-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [7, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:73"
+                  , "type":"resource"
+                  , "data":
+                  [14651, 6106, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":73
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Unsigned Integer Divide"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [14651, 6106, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79 > \naccessor.hpp:344 > accessor.hpp:1558 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [852, 276, 0, 15, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1558
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [384, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [468, 276, 0, 15, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [1512, 6150, 45, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1512, 6150, 45, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:329 > accessor.hpp:1551 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [1014, 264, 0, 15, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":329
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1551
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [564, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [450, 264, 0, 15, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:329 > accessor.hpp:1552"
+                  , "type":"resource"
+                  , "data":
+                  [186, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":329
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1552
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pointer Computation"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [186, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:344 > accessor.hpp:1558 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [1014, 264, 0, 15, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1558
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":9
+                      , "data":
+                      [564, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [450, 264, 0, 15, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:344 > accessor.hpp:1559"
+                  , "type":"resource"
+                  , "data":
+                  [186, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1559
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pointer Computation"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [186, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [3735, 12970, 58, 0, 194]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3735, 12970, 58, 0, 194]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [2742, 5119, 0, 0, 118]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1150, 2294, 0, 0, 56]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:71"
+                  , "type":"resource"
+                  , "data":
+                  [170, 223, 0, 0, 7]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:78"
+                  , "type":"resource"
+                  , "data":
+                  [82, 96, 0, 0, 9]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":78
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79"
+                  , "type":"resource"
+                  , "data":
+                  [484, 1020, 0, 0, 16]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79 > \naccessor.hpp:344 > accessor.hpp:1558 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [299, 509, 0, 0, 12]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1558
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [226, 340, 0, 0, 6]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:329 > accessor.hpp:1552"
+                  , "type":"resource"
+                  , "data":
+                  [331, 637, 0, 0, 12]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":329
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1552
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [44, 32, 47, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [230, 102, 0, 5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [156, 92, 0, 5, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"llvm.fpga.fanout"
+                      , "type":"resource"
+                      , "count":10
+                      , "data":
+                      [10, 10, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:73"
+                  , "type":"resource"
+                  , "data":
+                  [4893, 2078, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":73
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Unsigned Integer Divide"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4893, 2078, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:78"
+                  , "type":"resource"
+                  , "data":
+                  [8, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":78
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"11-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"2-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79"
+                  , "type":"resource"
+                  , "data":
+                  [11436, 30092, 184, 8, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"'Convert 64-bit Unsigned Integer to Floating-point' Function Call"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [3152, 2536, 0, 0, 0]
+                    }
+                    , {
+                      "name":"'Convert Floating-point to 64-bit Unsigned Integer' Function Call"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [1400, 1496, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Multiply-Add"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [0, 0, 0, 8, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [6884, 26060, 184, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Burst-coalesced non-aligned LSU"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced non-aligned LSU.  Use Dynamic Profiler to determine performance impact of this LSU."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79 > \naccessor.hpp:344 > accessor.hpp:1558 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [1572, 264, 0, 15, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1558
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":18
+                      , "data":
+                      [1122, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [450, 264, 0, 15, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:79 > \naccessor.hpp:344 > accessor.hpp:1559"
+                  , "type":"resource"
+                  , "data":
+                  [744, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":79
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1559
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pointer Computation"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [744, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 8, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:944"
+                  , "type":"resource"
+                  , "data":
+                  [5, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":944
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1246, 1978, 24, 0, 8]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1246, 1978, 24, 0, 8]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [123, 77, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [123, 77, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [32, 24, 0, 0, 8]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [3686, 12183, 19, 4, 124]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"'Convert 64-bit Unsigned Integer to Floating-point' Function Call"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [1576, 1268, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [8, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [0, 0, 0, 4, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [504, 2050, 15, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [1598, 8864, 4, 0, 124]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:329 > accessor.hpp:1551 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [485, 665, 0, 5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":329
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1551
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [188, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [297, 665, 0, 5, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:329 > accessor.hpp:1552"
+                  , "type":"resource"
+                  , "data":
+                  [62, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":329
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1552
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pointer Computation"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [62, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:344 > accessor.hpp:1558 > \naccessor.hpp:840"
+                  , "type":"resource"
+                  , "data":
+                  [485, 665, 0, 5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1558
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":840
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Integer Add"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [188, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"64-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [297, 665, 0, 5, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:940 > matrix-multi-st-v2.cpp:80 > \naccessor.hpp:344 > accessor.hpp:1559"
+                  , "type":"resource"
+                  , "data":
+                  [62, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":940
+                      }
+                      , {
+                        "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v2.cpp"
+                        , "line":80
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":344
+                      }
+                      , {
+                        "filename":"/glob/development-tools/versions/oneapi/2022.1.2/oneapi/compiler/2022.0.2/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                        , "line":1559
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pointer Computation"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [62, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

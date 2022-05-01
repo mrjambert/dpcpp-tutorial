@@ -1,0 +1,57 @@
+{
+  "nodes":
+  [
+    {
+      "name":"MMpara_v2"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"MMpara_v2.B0"
+          , "id":2
+          , "type":"bb"
+        }
+        , {
+          "name":"MMpara_v2.B1"
+          , "id":3
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":11
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 1"
+              , "id":13
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"4X Partially unrolled MMpara_v2.B2"
+          , "id":4
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":23
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 3"
+              , "id":30
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

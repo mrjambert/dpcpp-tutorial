@@ -1,0 +1,432 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":900
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"1024 bytes"
+          , "Channels":"2 channels"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR Width (bits)":"512, 512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":902
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 1"
+          , "id":903
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":901
+      , "parent":"900"
+      , "bw":"34133.00"
+      , "num_channels":"2"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":904
+      , "parent":"900"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":905
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":908
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Writes":"2"
+              , "User specified force-single-store-ring flag":"False"
+              , "Store Rings":"2"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect"
+          , "id":906
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Reads":"5"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect Router"
+          , "id":907
+          , "details":
+          [
+            {
+              "type":"table"
+              , "User specified num-reorder flag":"Unset"
+            }
+          ]
+          , "type":"memsys"
+          , "children":
+          [
+            {
+              "name":"Bus 0"
+              , "id":918
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 1"
+              , "id":919
+              , "type":"memsys"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Loads"
+      , "id":909
+      , "parent":"900"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"LD"
+          , "id":910
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"6"
+              , "Latency":"239 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":101
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":911
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"6"
+              , "Latency":"239 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":912
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"6"
+              , "Latency":"239 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":103
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":915
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"6"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"PREFETCHING"
+              , "Kernel":"MMstv3_cplusd"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":156
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":916
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"6"
+              , "Latency":"223 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3_cplusd"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":156
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":913
+      , "parent":"900"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":914
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"10"
+              , "Latency":"74 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":124
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":917
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"236"
+              , "Latency":"58 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMstv3_cplusd"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":156
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":902
+      , "to":901
+    }
+    , {
+      "from":901
+      , "to":902
+    }
+    , {
+      "from":903
+      , "to":901
+    }
+    , {
+      "from":901
+      , "to":903
+    }
+    , {
+      "from":906
+      , "to":905
+    }
+    , {
+      "from":908
+      , "to":905
+    }
+    , {
+      "from":905
+      , "to":901
+    }
+    , {
+      "from":910
+      , "to":906
+    }
+    , {
+      "from":911
+      , "to":906
+    }
+    , {
+      "from":912
+      , "to":906
+    }
+    , {
+      "from":914
+      , "to":908
+    }
+    , {
+      "from":915
+      , "to":906
+    }
+    , {
+      "from":916
+      , "to":906
+    }
+    , {
+      "from":917
+      , "to":908
+    }
+    , {
+      "from":901
+      , "to":918
+    }
+    , {
+      "from":901
+      , "to":919
+    }
+    , {
+      "from":918
+      , "to":910
+      , "reverse":1
+    }
+    , {
+      "from":919
+      , "to":911
+      , "reverse":1
+    }
+    , {
+      "from":918
+      , "to":912
+      , "reverse":1
+    }
+    , {
+      "from":919
+      , "to":915
+      , "reverse":1
+    }
+    , {
+      "from":918
+      , "to":916
+      , "reverse":1
+    }
+  ]
+}

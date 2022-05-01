@@ -1,0 +1,437 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":116
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"1024 bytes"
+          , "Channels":"2 channels"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR Width (bits)":"512, 512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":118
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 1"
+          , "id":119
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":117
+      , "parent":"116"
+      , "bw":"34133.00"
+      , "num_channels":"2"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"34133.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":120
+      , "parent":"116"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":121
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":124
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Writes":"1"
+              , "User specified force-single-store-ring flag":"False"
+              , "Store Rings":"2"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect"
+          , "id":122
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Reads":"6"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect Router"
+          , "id":123
+          , "details":
+          [
+            {
+              "type":"table"
+              , "User specified num-reorder flag":"Unset"
+            }
+          ]
+          , "type":"memsys"
+          , "children":
+          [
+            {
+              "name":"Bus 0"
+              , "id":134
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 1"
+              , "id":135
+              , "type":"memsys"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Loads"
+      , "id":125
+      , "parent":"116"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"LD"
+          , "id":126
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"10"
+              , "Latency":"191 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":129
+          , "kwidth":"128"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"191 cycles"
+              , "Width":"128 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-NON-ALIGNED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":130
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"191 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":131
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"191 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":132
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"191 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"LD"
+          , "id":133
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"11"
+              , "Latency":"191 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"Yes"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":78
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":127
+      , "parent":"116"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":128
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"208"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"MMpara_v2"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-para-v2.cpp"
+                , "line":80
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":118
+      , "to":117
+    }
+    , {
+      "from":117
+      , "to":118
+    }
+    , {
+      "from":119
+      , "to":117
+    }
+    , {
+      "from":117
+      , "to":119
+    }
+    , {
+      "from":122
+      , "to":121
+    }
+    , {
+      "from":124
+      , "to":121
+    }
+    , {
+      "from":121
+      , "to":117
+    }
+    , {
+      "from":126
+      , "to":122
+    }
+    , {
+      "from":128
+      , "to":124
+    }
+    , {
+      "from":129
+      , "to":122
+    }
+    , {
+      "from":130
+      , "to":122
+    }
+    , {
+      "from":131
+      , "to":122
+    }
+    , {
+      "from":132
+      , "to":122
+    }
+    , {
+      "from":133
+      , "to":122
+    }
+    , {
+      "from":117
+      , "to":134
+    }
+    , {
+      "from":117
+      , "to":135
+    }
+    , {
+      "from":134
+      , "to":126
+      , "reverse":1
+    }
+    , {
+      "from":135
+      , "to":129
+      , "reverse":1
+    }
+    , {
+      "from":134
+      , "to":130
+      , "reverse":1
+    }
+    , {
+      "from":135
+      , "to":131
+      , "reverse":1
+    }
+    , {
+      "from":134
+      , "to":132
+      , "reverse":1
+    }
+    , {
+      "from":135
+      , "to":133
+      , "reverse":1
+    }
+  ]
+}

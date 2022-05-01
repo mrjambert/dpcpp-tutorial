@@ -1,0 +1,85 @@
+{
+  "nodes":
+  [
+    {
+      "name":"MMstv2"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"MMstv2.B0"
+          , "id":2
+          , "type":"bb"
+        }
+        , {
+          "name":"4X Partially unrolled MMstv2.B1"
+          , "id":3
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":33
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"Fused loop MMstv2.B2"
+          , "id":4
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":65
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 2"
+              , "id":78
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"MMstv2.B3"
+          , "id":5
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv2.B4"
+          , "id":6
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":109
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 4"
+              , "id":110
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":111
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 6"
+              , "id":127
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

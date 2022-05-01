@@ -1,0 +1,945 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"MemDep"
+      , "id":660
+      , "src":"42"
+      , "dst":"269"
+      , "concurrency":"1"
+      , "type":"Occupancy limiter"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv3.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Loop: ":"_ZTS6MMstv3.B2"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"94"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Concurrency value: ":"1"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B11(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"107"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B12(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"98"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B7(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B10(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"110"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B4(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"98"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B5(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"99"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B8(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B9(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"107"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Feedback"
+          , "id":42
+          , "start":"5.00"
+          , "parent":"_ZTS6MMstv3.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":111
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"MMstv3.B4"
+          , "id":7
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":98
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B5"
+          , "id":8
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":99
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B6"
+          , "id":9
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":98
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B7"
+          , "id":10
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B8"
+          , "id":11
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B9"
+          , "id":12
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":107
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B10"
+          , "id":13
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":110
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B11"
+          , "id":14
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":107
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B12"
+          , "id":15
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Feedback"
+          , "id":269
+          , "end":"1.00"
+          , "parent":"_ZTS6MMstv3.B13"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":111
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":7
+          , "to":8
+        }
+        , {
+          "from":8
+          , "to":8
+        }
+        , {
+          "from":8
+          , "to":9
+        }
+        , {
+          "from":9
+          , "to":10
+        }
+        , {
+          "from":10
+          , "to":11
+        }
+        , {
+          "from":11
+          , "to":12
+        }
+        , {
+          "from":12
+          , "to":13
+        }
+        , {
+          "from":13
+          , "to":13
+        }
+        , {
+          "from":13
+          , "to":14
+        }
+        , {
+          "from":14
+          , "to":15
+        }
+        , {
+          "from":42
+          , "to":7
+        }
+        , {
+          "from":15
+          , "to":269
+        }
+        , {
+          "from":42
+          , "to":269
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"MemDep"
+      , "id":661
+      , "src":"43"
+      , "dst":"317"
+      , "concurrency":"1"
+      , "type":"Occupancy limiter"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv3.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Loop: ":"_ZTS6MMstv3.B2"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"94"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Concurrency value: ":"1"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B11(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"107"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B12(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B13(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"121"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B16(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"121"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"98"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: MMstv3.B7(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B10(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"110"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B14(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"121"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B15(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"122"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B4(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"98"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B5(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"99"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B8(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"106"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: MMstv3.B9(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"107"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Feedback"
+          , "id":43
+          , "start":"5.00"
+          , "parent":"_ZTS6MMstv3.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":124
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"MMstv3.B4"
+          , "id":7
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":98
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B5"
+          , "id":8
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":99
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B6"
+          , "id":9
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":98
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B7"
+          , "id":10
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B8"
+          , "id":11
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B9"
+          , "id":12
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":107
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B10"
+          , "id":13
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":110
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B11"
+          , "id":14
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":107
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B12"
+          , "id":15
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":106
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B13"
+          , "id":16
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":121
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv3.B14"
+          , "id":17
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":121
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B15"
+          , "id":18
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":122
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"MMstv3.B16"
+          , "id":19
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":121
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Feedback"
+          , "id":317
+          , "end":"1.00"
+          , "parent":"_ZTS6MMstv3.B17"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":124
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":7
+          , "to":8
+        }
+        , {
+          "from":8
+          , "to":8
+        }
+        , {
+          "from":8
+          , "to":9
+        }
+        , {
+          "from":9
+          , "to":10
+        }
+        , {
+          "from":10
+          , "to":11
+        }
+        , {
+          "from":11
+          , "to":12
+        }
+        , {
+          "from":12
+          , "to":13
+        }
+        , {
+          "from":13
+          , "to":13
+        }
+        , {
+          "from":13
+          , "to":14
+        }
+        , {
+          "from":14
+          , "to":15
+        }
+        , {
+          "from":15
+          , "to":16
+        }
+        , {
+          "from":16
+          , "to":17
+        }
+        , {
+          "from":17
+          , "to":18
+        }
+        , {
+          "from":18
+          , "to":18
+        }
+        , {
+          "from":18
+          , "to":19
+        }
+        , {
+          "from":43
+          , "to":7
+        }
+        , {
+          "from":19
+          , "to":317
+        }
+        , {
+          "from":43
+          , "to":317
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":662
+      , "src":"322"
+      , "dst":"336"
+      , "concurrency":"1"
+      , "type":"Occupancy limiter"
+      , "brief":"Memory dependency"
+      , "loop":"MMstv3_cplusd.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Concurrency value: ":"1"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Loop: MMstv3_cplusd.B2(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                  , "line":"155"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":322
+          , "start":"10.00"
+          , "parent":"_ZTS13MMstv3_cplusd.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":156
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"MMstv3_cplusd.B2"
+          , "id":24
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":155
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"Feedback"
+          , "id":336
+          , "end":"1.00"
+          , "parent":"_ZTS13MMstv3_cplusd.B3"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/u132412/dpcpp-tutorial/matrix-multi/build/src/matrix-multi-st-v3.cpp"
+                , "line":156
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":24
+          , "to":24
+        }
+        , {
+          "from":322
+          , "to":24
+        }
+        , {
+          "from":24
+          , "to":336
+        }
+        , {
+          "from":322
+          , "to":336
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

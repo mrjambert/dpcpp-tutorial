@@ -1,0 +1,88 @@
+{
+  "nodes":
+  [
+    {
+      "name":"MMstv1"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"MMstv1.B0"
+          , "id":2
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv1.B1"
+          , "id":3
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":17
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"MMstv1.B2"
+          , "id":4
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":23
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"MMstv1.B3"
+          , "id":5
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":37
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"2X Partially unrolled MMstv1.B4"
+          , "id":6
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":50
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 4"
+              , "id":54
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"MMstv1.B5"
+          , "id":7
+          , "type":"bb"
+        }
+        , {
+          "name":"MMstv1.B6"
+          , "id":8
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
